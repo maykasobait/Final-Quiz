@@ -37,7 +37,7 @@
                                 <th>Last Name</th>
                                 <th>Middle Name</th>
                                 <th>Dob</th>
-                                <th>Address</th>
+                                <th>Full Address</th>
                             </tr>
                         </thead>
 
