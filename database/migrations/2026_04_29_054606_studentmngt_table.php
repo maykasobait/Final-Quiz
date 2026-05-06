@@ -1,5 +1,5 @@
-
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stud_tbl', function (Blueprint $table) {
-            $table->string('id')->primary();
+        Schema::create('3A_tbl', function (Blueprint $table) {
+            $table->id();
             $table->string('fname');
             $table->string('lname');
             $table->string('mname');
             $table->string('add');
             $table->date('dob');
-
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // no-op
+        //
     }
 };

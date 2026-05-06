@@ -5,11 +5,8 @@
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
-                <div class="col-sm-12">
-                    <h1 class="m-0">{{ __('Student Update') }}</h1>
-                    @if (session('status'))
-                      <div class="alert alert-success">{{session('status')}}</div>
-                  @endif
+                <div class="col-sm-6">
+                    <h1 class="m-0">{{ __('Student Management') }}</h1>
                 </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -21,61 +18,61 @@
         <div class="container-fluid">
         <div class="row">
 
+                  @if (session('status'))
+                      <div class="alert alert-success">{{session('status')}}</div>
+                  @endif
+
                 <div class="col-6 m-auto">
                   <div class="card card-secondary">
                    <div class="card-header">
-                     <h3 class="card-title">Edit Student Information</h3>
+                     <h3 class="card-title">Add new student</h3>
                    </div>
 
-                     <form  action="{{ route('student.update', $student->id) }}" method="POST">
+                     <form  action="{{ route('student.store') }}" method="POST">
                       @csrf
-                      @method('PUT')
                        <div class="row card-body col-12">
                          <div class="form-group col-12">
                             <label
                                for="exampleInputEmail1">First Name
                             </label>
-                               <input type="text" class="form-control g-2" id="fname" name="fname" placeholder="Enter your Firstname" required value="{{ $student->fname }}">
+                               <input type="text" class="form-control g-2" id="fname" name="fname" placeholder="Enter your Firstname" require>
                          </div>
                           @error('fname') <span class="text-danger">{{$message}}</span> @enderror
 
                         <div class="form-group col-12">
                           <label for="exampleInputPassword1">Last Name</label>
-                          <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your Last Name"
-                          value="{{ $student->lname }}">
+                          <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter your Last Name">
                         </div>
                           @error('lname') <span class="text-danger">{{$message}}</span> @enderror
 
                         <div class="form-group col-12">
                            <label for="exampleInputFile">Middle Name</label>
 
-                          <input type="text" class="form-control" id="mname" name="mname" placeholder="Enter your Middle Name"
-                          value="{{ $student->mname }}">
+                          <input type="text" class="form-control" id="mname" name="mname" placeholder="Enter your Middle Name">
                         </div>
                           @error('mname') <span class="text-danger">{{$message}}</span> @enderror
 
 
                         <div class="form-group col-12">
                           <label for="exampleInputEmail1">Address</label>
-                          <input type="text" class="form-control" id="add" name="add" placeholder="Enter Address" value="{{ $student->add }}">
+                          <input type="text" class="form-control" id="add" name="add" placeholder="Enter Address">
                         </div>
                           @error('address') <span class="text-danger">{{$message}}</span> @enderror
 
 
 
-
-
                         <div class="form-group col-6">
-                          <label for="exampleInputPassword1">Birthday</label>
-                          <input type="date" class="form-control" id="dob" name="dob" placeholder="" value="{{ $student->dob }}">
+                          <label for="exampleInputPassword1">Date f Birth</label>
+                          <input type="date" class="form-control" id="dob" name="dob" placeholder="">
                         </div>
-                        @error('dob') <span class="text-danger">{{$message}}</span> @enderror
+                        @error('date of birth') <span class="text-danger">{{$message}}</span> @enderror
+
 
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer ">
-                  <button type="submit" class="btn btn-success col-12">Update</button>
+                  <button type="submit" class="btn btn-success col-12">Submit</a>
                 </div>
 
 

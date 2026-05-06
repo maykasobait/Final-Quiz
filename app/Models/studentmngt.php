@@ -2,14 +2,13 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class stu_mngt extends Model
+class studentmngt extends Model
 {
-    use HasFactory;
-
-    protected $table = 'stud_tbl';
-
+    Use HasFactory;
+    protected $table = '3A_tbl';
     protected $primaryKey = 'id';
 
     protected $fillable = [
@@ -17,6 +16,6 @@ class stu_mngt extends Model
         'lname',
         'mname',
         'add',
-        'dob',
+        'dob'
     ];
 }

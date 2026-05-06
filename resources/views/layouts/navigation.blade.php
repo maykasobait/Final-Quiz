@@ -28,38 +28,21 @@
                     </p>
                 </a>
             </li>
-                        <li class="nav-item">
-                <a href="{{Route('student.index')}}" class="nav-link">
+
+            <!-- STUDENT -->
+             <li class="nav-item">
+                <a href="{{ route('student.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
-                        {{ __('Student management') }}
+                        {{ __('Student Management') }}
                     </p>
                 </a>
             </li>
-                                    <li class="nav-item">
-                <a href="{{Route('student.add')}}" class="nav-link">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>
-                        {{ __('Add Student') }}
-                    </p>
-                </a>
-            </li>
-                                    <li class="nav-item">
-                <a href="{{Route('student.edit')}}" class="nav-link">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>
-                        {{ __('Edit Student') }}
-                    </p>
-                </a>
-            </li>
-                                    <li class="nav-item">
-                <a href="{{Route('student.delete')}}" class="nav-link">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>
-                        {{ __('Delete Student') }}
-                    </p>
-                </a>
-            </li>
+
+
+
+
+<!-- -->
 
             <li class="nav-item">
                 <a href="{{ route('about') }}" class="nav-link">
